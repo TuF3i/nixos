@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-  services.mihomo = {
-    enable = true;
-    webui = pkgs.metacubexd;
-  };
+  # services.mihomo = {
+  #   enable = true;
+  #   webui = pkgs.metacubexd;
+  # };
 }

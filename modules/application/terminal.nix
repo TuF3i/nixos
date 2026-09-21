@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  envrioment.systemPackages = [ pkgs.ghostty ];
+  environment.systemPackages = [ pkgs.ghostty ];
 }
