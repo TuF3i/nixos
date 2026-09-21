@@ -1,6 +1,19 @@
 { inputs, pkgs, ... }: {
   imports = [
+    ./hardware-configuration.nix
+
     ../modules/core/shell.nix
+    ../modules/core/boot.nix
+    ../modules/core/nixos.nix
+    ../modules/core/tool.nix
+
+    ../modules/application/browser.nix
+    ../modules/application/terminal.nix
+
+    ../modules/desktop/dms.nix
+    ../modules/desktop/niri.nix
+
+    ../modules/service/mihomo.nix
   ];
 
   time.timeZone = "Asia/Shanghai";
