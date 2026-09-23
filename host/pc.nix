@@ -6,9 +6,13 @@
     ../modules/core/boot.nix
     ../modules/core/nixos.nix
     ../modules/core/tool.nix
+    # ../modules/core/proxy.nix
 
     ../modules/application/browser.nix
     ../modules/application/terminal.nix
+    ../modules/application/claude.nix
+    ../modules/application/zcode.nix
+    ../modules/application/fcitx5.nix
 
     ../modules/desktop/dms.nix
     ../modules/desktop/niri.nix
@@ -33,8 +37,15 @@
     ];
 
     shell = pkgs.zsh;
+  };
 
-    packages = with pkgs; [ ];
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    # HM 接管已存在的文件时,把旧文件改名为 <file>.backup 而不是报错
+    backupFileExtension = "backup";
+    users.tuf3i = import ../home/tuf3i.nix;
   };
 
   nixpkgs.config.allowUnfree = true;
