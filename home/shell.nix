@@ -17,11 +17,17 @@
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
+      {
+        # Tab 补全变成 fzf 菜单;需在 compinit(oh-my-zsh 完成)之后加载
+        name = "fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+        file = "share/fzf-tab/fzf-tab.plugin.zsh";
+      }
     ];
 
     # p10k 配置由 `p10k configure` 生成在 ~/.p10k.zsh(非 HM 管理),必须显式
     # source,否则 p10k 找不到已保存的配置,每个新终端都会启动配置向导
-    initExtra = ''
+    initContent = ''
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
 
@@ -40,8 +46,21 @@
 
   programs.fzf.enable = true;
 
+  # eza(ls 替代品)图标化:目录/文件类型图标,依赖终端 Nerd Font(已具备)
+  programs.zsh.shellAliases = {
+    ls = "eza --icons=auto --group-directories-first";
+    ll = "eza -la --icons=auto --group-directories-first --git";
+    lt = "eza --tree --icons=auto --level=2";
+    # nvim 配置由 AstroNvim 管理(HM 不接管),vi/vim 转到 nvim
+    vi = "nvim";
+    vim = "nvim";
+  };
+
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
+    # niri 以这两个变量作为合成器默认光标主题/大小
+    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    XCURSOR_SIZE = "24";
   };
 }

@@ -13,11 +13,15 @@
     ../modules/application/claude.nix
     ../modules/application/zcode.nix
     ../modules/application/fcitx5.nix
+    ../modules/application/clash-rev.nix
+    ../modules/application/libreoffice.nix
 
     ../modules/desktop/dms.nix
     ../modules/desktop/niri.nix
+    ../modules/desktop/greeter.nix
 
     ../modules/service/mihomo.nix
+    ../modules/service/zerotier.nix
   ];
 
   time.timeZone = "Asia/Shanghai";

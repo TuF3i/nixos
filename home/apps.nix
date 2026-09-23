@@ -1,4 +1,13 @@
-{ ... }: {
+{ pkgs, ... }: {
+  # 鼠标光标主题;niri 会读取 XCURSOR_THEME/SIZE 环境变量作为默认光标
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.catppuccin-cursors.mochaDark;
+    name = "catppuccin-mocha-dark-cursors";
+    size = 24;
+    gtk.enable = true;
+  };
+
   programs.ghostty = {
     enable = true;
 
