@@ -22,7 +22,8 @@ target/                       # 各主机配置(文件夹名 = 主机名)
       gpg-ssh.nix                 # GPG 签名 + SSH
 modules/                      # 共享模块库,供 target 按需导入
   cli/                        # CLI 工具,每个工具一个 <名称>.nix 单文件
-  gui/                        # GUI 应用:browser / libreoffice / fcitx5
+  dev/                        # 开发环境:platformio / go / rust / c-cpp / java / python / lua
+  gui/                        # GUI 应用:browser / vscode / zed / 通讯办公等
   desktop/                    # 桌面环境:niri / dms / greeter
   service/                    # 服务:clash-verge / zerotier
 ```

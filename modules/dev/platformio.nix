@@ -1,8 +1,9 @@
 { pkgs, ... }: {
-  # PlatformIO Core(pio 命令行,FHS 沙箱版:下载的交叉工具链开箱能跑)
-  environment.systemPackages = [ pkgs.platformio ];
-
-  # 烧录器 udev 规则(部分板子的 USB 权限);用户已在 dialout 组
+  # PlatformIO:pio 命令行不走 nix 包,由 VSCode PlatformIO IDE 扩展管理的
+  # ~/.platformio/penv 提供(HM shell.nix 已把 penv/bin 加进 PATH)。
+  # 基底解释器 python3 由 modules/dev/python.nix 提供(需一并导入);
+  # 下载的工具链为通用 Linux 二进制,由 nix-ld 负责运行。
+  # 这里只提供:udev 烧录规则(用户已在 dialout 组)
   services.udev.packages = [
     (pkgs.writeTextFile {
       name = "platformio-udev-rules";

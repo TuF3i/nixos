@@ -37,6 +37,13 @@
       ignoreDups = true;
       share = true;
     };
+
+    # PlatformIO penv(VSCode 扩展管理)加入终端 PATH;前置使其 pio 优先生效
+    envExtra = ''
+      if [ -d "$HOME/.platformio/penv/bin" ]; then
+        export PATH="$HOME/.platformio/penv/bin:$PATH"
+      fi
+    '';
   };
 
   programs.direnv = {

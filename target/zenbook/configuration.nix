@@ -20,13 +20,20 @@
     ../../modules/cli/fd.nix
     ../../modules/cli/unzip.nix
     ../../modules/cli/wl-clipboard.nix
-    ../../modules/cli/gcc.nix
     ../../modules/cli/tree-sitter.nix
     ../../modules/cli/nixd.nix
     ../../modules/cli/nil.nix
     ../../modules/cli/nixfmt.nix
     ../../modules/cli/gitmoji-cli.nix
-    ../../modules/cli/platformio.nix
+
+    # 开发环境(按语言一个单文件,按需增删)
+    ../../modules/dev/platformio.nix
+    ../../modules/dev/go.nix
+    ../../modules/dev/rust.nix
+    ../../modules/dev/c-cpp.nix
+    ../../modules/dev/java.nix
+    ../../modules/dev/python.nix
+    ../../modules/dev/lua.nix
 
     # Git 托管平台与 Kubernetes 工具链
     ../../modules/cli/tea.nix
