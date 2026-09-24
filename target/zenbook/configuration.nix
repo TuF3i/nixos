@@ -45,6 +45,14 @@
     ../../modules/gui/zed.nix
     ../../modules/gui/vscode.nix
     ../../modules/gui/bitwarden.nix
+
+    # 通讯与办公
+    ../../modules/gui/qq.nix
+    ../../modules/gui/wechat.nix
+    ../../modules/gui/feishu.nix
+    ../../modules/gui/wemeet.nix
+    ../../modules/gui/obs.nix
+
     ../../modules/gui/fcitx5.nix
 
     # 桌面环境
