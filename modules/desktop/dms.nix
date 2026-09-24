@@ -33,7 +33,13 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      monospace = [ "FiraCode Nerd Font" ];
+      monospace = [
+        "FiraCode Nerd Font"
+        # 显式指定简体变体:不指定时 fontconfig 会回退到 KR(韩文)字形,
+        # 导致终端里的中文笔画风格异常
+        "Noto Sans Mono CJK SC"
+      ];
+      sansSerif = [ "Noto Sans CJK SC" ];
     };
   };
 
