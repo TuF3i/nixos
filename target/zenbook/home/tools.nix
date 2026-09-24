@@ -4,7 +4,7 @@
 
     settings = {
       user.name = "TuF3i";
-      user.email = "tuf3i.do@outlook.com";
+      user.email = "13759301652@163.com";
 
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
