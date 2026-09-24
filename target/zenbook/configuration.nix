@@ -25,12 +25,22 @@
     ../../modules/cli/nixd.nix
     ../../modules/cli/nixfmt.nix
     ../../modules/cli/gitmoji-cli.nix
+
+    # Git 托管平台与 Kubernetes 工具链
+    ../../modules/cli/tea.nix
+    ../../modules/cli/gh.nix
+    ../../modules/cli/kubectl.nix
+    ../../modules/cli/kubectx.nix
+    ../../modules/cli/kconf.nix
+    ../../modules/cli/helm.nix
+
     ../../modules/cli/claude.nix
     ../../modules/cli/zcode.nix
 
     # GUI 应用
     ../../modules/gui/browser.nix
     ../../modules/gui/libreoffice.nix
+    ../../modules/gui/lens.nix
     ../../modules/gui/fcitx5.nix
 
     # 桌面环境
