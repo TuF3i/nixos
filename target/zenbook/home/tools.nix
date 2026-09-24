@@ -8,6 +8,15 @@
 
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+
+      # 声明式 credential helper:git 全局配置是 HM 只读文件,
+      # gh/tea 无法运行时写入,helper 直接在此声明,工具只管认证
+      credential = {
+        "https://github.com".helper = "!gh auth git-credential";
+        "https://git.lan.tuf3i.cc".helper = "tea login helper";
+        "https://git.tuf3i.cc".helper = "tea login helper";
+        "https://git.redrock.team".helper = "tea login helper";
+      };
     };
 
     signing = {
