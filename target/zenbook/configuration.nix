@@ -26,6 +26,7 @@
     ../../modules/cli/nil.nix
     ../../modules/cli/nixfmt.nix
     ../../modules/cli/gitmoji-cli.nix
+    ../../modules/cli/platformio.nix
 
     # Git 托管平台与 Kubernetes 工具链
     ../../modules/cli/tea.nix
