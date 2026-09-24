@@ -53,6 +53,8 @@
     ../../modules/gui/zed.nix
     ../../modules/gui/vscode.nix
     ../../modules/gui/bitwarden.nix
+    ../../modules/gui/android-studio.nix
+    ../../modules/gui/navicat.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
@@ -71,6 +73,7 @@
     # 服务
     ../../modules/service/clash-rev.nix
     ../../modules/service/zerotier.nix
+    ../../modules/service/printing.nix
   ];
 
   time.timeZone = "Asia/Shanghai";
