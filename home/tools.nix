@@ -9,6 +9,13 @@
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
     };
+
+    # 生成 GPG 密钥后:gpg --list-secret-keys --keyid-format=long 取 Key ID,
+    # 填入下面并取消注释,再 nh os switch
+    signing = {
+      key = "6145C78DBD70F5C2";
+      signByDefault = true;
+    };
   };
 
   programs.delta = {
@@ -18,11 +25,7 @@
 
   # nvim 配置(~/.config/nvim)由 AstroNvim 模板手动管理,不走 HM;
   # 二进制来自系统层 tool.nix,EDITOR 已在 shell.nix 设置
-
-  # nixd LSP:格式化走 nixfmt(RFC 风格,与官方一致)
-  home.file.".config/nixd/config.json".text = builtins.toJSON {
-    formatting = { command = [ "nixfmt" ]; };
-  };
+  # nixd 的设置经编辑器 LSP 传入(见 nvim 的 lua/plugins/nix.lua),无需配置文件
 
   home.packages = with pkgs; [
     fastfetch
@@ -39,7 +42,7 @@
 
     # Nix 开发体验:LSP + 格式化
     nixd
-    nixfmt-rfc-style
+    nixfmt
     gitmoji-cli
 
     # treesitter CLI(nix 原生版,解析器编译的后备路径)

@@ -53,7 +53,7 @@
       background-blur-radius = 32;
 
       # Cursor
-      cursor-style = "block";
+      cursor-style = "underline";
       cursor-style-blink = true;
 
       # Scrollback

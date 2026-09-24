@@ -24,5 +24,6 @@
     ./shell.nix
     ./tools.nix
     ./apps.nix
+    ./gpg-ssh.nix
   ];
 }
