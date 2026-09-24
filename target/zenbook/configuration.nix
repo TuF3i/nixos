@@ -23,6 +23,7 @@
     ../../modules/cli/gcc.nix
     ../../modules/cli/tree-sitter.nix
     ../../modules/cli/nixd.nix
+    ../../modules/cli/nil.nix
     ../../modules/cli/nixfmt.nix
     ../../modules/cli/gitmoji-cli.nix
 
@@ -41,6 +42,9 @@
     ../../modules/gui/browser.nix
     ../../modules/gui/libreoffice.nix
     ../../modules/gui/lens.nix
+    ../../modules/gui/zed.nix
+    ../../modules/gui/vscode.nix
+    ../../modules/gui/bitwarden.nix
     ../../modules/gui/fcitx5.nix
 
     # 桌面环境
