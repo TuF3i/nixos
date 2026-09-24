@@ -21,6 +21,9 @@
         AddKeysToAgent = "yes";
       };
       "github.com" = {
+        # 443 端口走 SSH-over-HTTPS:22 端口被网络封锁时的标准绕行方案
+        HostName = "ssh.github.com";
+        Port = 443;
         User = "git";
         IdentityFile = "~/.ssh/id_rsa";
       };
