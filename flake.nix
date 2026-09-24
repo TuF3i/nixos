@@ -25,7 +25,7 @@
           };
           system = "x86_64-linux";
           modules = [
-            ./host/pc.nix
+            ./target/zenbook/configuration.nix
             inputs.home-manager.nixosModules.home-manager
           ];
         };
