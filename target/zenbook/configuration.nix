@@ -61,6 +61,7 @@
     ../../modules/gui/yakit.nix
     ../../modules/gui/apifox.nix
     ../../modules/gui/etcd-workbench.nix
+    ../../modules/gui/tabby.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
