@@ -86,6 +86,7 @@
     ../../modules/service/zerotier.nix
     ../../modules/service/printing.nix
     ../../modules/service/flatpak.nix
+    ../../modules/service/steam.nix
     ../../modules/service/certificates.nix
     ../../modules/service/yak-cap.nix
     ../../modules/service/docker.nix
