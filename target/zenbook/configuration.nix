@@ -55,6 +55,7 @@
     ../../modules/gui/bitwarden.nix
     ../../modules/gui/android-studio.nix
     ../../modules/gui/navicat.nix
+    ../../modules/gui/redisinsight.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
@@ -74,6 +75,7 @@
     ../../modules/service/clash-rev.nix
     ../../modules/service/zerotier.nix
     ../../modules/service/printing.nix
+    ../../modules/service/flatpak.nix
   ];
 
   time.timeZone = "Asia/Shanghai";
@@ -104,6 +106,10 @@
     users.tuf3i = import ./home;
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    # RedisInsight 依赖的 Electron 版本被标记 insecure,显式放行
+    permittedInsecurePackages = [ "electron-41.10.6" ];
+  };
   system.stateVersion = "26.05";
 }
