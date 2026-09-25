@@ -52,12 +52,11 @@
 let
   pname = "lceda-pro";
   version = "4.1.60";
-
+  src = /home/tuf3i/Downloads/lceda-pro-linux-x64-${version}.zip;
   # 手动下载的官方 zip(官方 API 需登录才能取得签名下载地址)。
   # 本地路径引用需要构建时关闭纯求值:--impure
   # (nh os switch -- --impure 或 sudo nixos-rebuild switch --flake ... --impure)
   # 更新版本:下载新 zip 到 Downloads/,改下面的路径与 version
-  src = /home/tuf3i/Downloads/lceda-pro-linux-x64-${version}.zip;
 
   fontsConf = pkgs.writeText "lceda-fonts.conf" ''
     <?xml version="1.0"?>
