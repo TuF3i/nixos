@@ -159,10 +159,19 @@ let
       cp -r lceda-pro/. $out/lib/lceda-pro/
       chmod +x $out/lib/lceda-pro/lceda-pro
 
-      makeWrapper $out/lib/lceda-pro/lceda-pro $out/bin/lceda-pro \
+      makeWrapper $out/lib/lceda-pro/lceda-pro $out/bin/.lceda-pro-real \
         --add-flags "--no-sandbox --disable-gpu --gtk-version=3" \
         --set APPDIR "$out/lib/lceda-pro" \
         --set FONTCONFIG_FILE "${fontsConf}"
+
+      # 应用入口:启动前清理陈旧的引擎 unix socket——引擎崩溃/被杀后
+      # socket 残留,connect-or-serve 逻辑会误连死端点导致启动即退出
+      cat > $out/bin/lceda-pro <<'EOF'
+      #!/run/current-system/sw/bin/bash
+      rm -f /tmp/JLCEDAPro*.sock 2>/dev/null || true
+      exec "$(dirname "$(readlink -f "$0")")/.lceda-pro-real" "$@"
+      EOF
+      chmod +x $out/bin/lceda-pro
 
       runHook postInstall
     '';
