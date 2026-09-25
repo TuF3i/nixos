@@ -62,6 +62,7 @@
     ../../modules/gui/apifox.nix
     ../../modules/gui/etcd-workbench.nix
     ../../modules/gui/tabby.nix
+    ../../modules/gui/termius.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
