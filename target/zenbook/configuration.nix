@@ -65,6 +65,7 @@
     ../../modules/gui/tabby.nix
     ../../modules/gui/termius.nix
     ../../modules/gui/hmcl.nix
+    ../../modules/gui/lceda-pro.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
