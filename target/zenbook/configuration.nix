@@ -35,6 +35,7 @@
     ../../modules/dev/java.nix
     ../../modules/dev/python.nix
     ../../modules/dev/lua.nix
+    ../../modules/dev/nodejs.nix
 
     # Git 托管平台与 Kubernetes 工具链
     ../../modules/cli/tea.nix
@@ -63,6 +64,7 @@
     ../../modules/gui/etcd-workbench.nix
     ../../modules/gui/tabby.nix
     ../../modules/gui/termius.nix
+    ../../modules/gui/hmcl.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
