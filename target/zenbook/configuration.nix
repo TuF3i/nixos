@@ -60,6 +60,7 @@
     ../../modules/gui/mongodb-compass.nix
     ../../modules/gui/yakit.nix
     ../../modules/gui/apifox.nix
+    ../../modules/gui/etcd-workbench.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
