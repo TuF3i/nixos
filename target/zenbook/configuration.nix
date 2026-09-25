@@ -82,6 +82,7 @@
     ../../modules/service/flatpak.nix
     ../../modules/service/certificates.nix
     ../../modules/service/yak-cap.nix
+    ../../modules/service/docker.nix
   ];
 
   time.timeZone = "Asia/Shanghai";
@@ -98,6 +99,7 @@
       "video"
       "dialout"
       "bluetooth"
+      "docker"
     ];
 
     shell = pkgs.zsh;

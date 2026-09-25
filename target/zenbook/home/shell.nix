@@ -9,6 +9,10 @@
     oh-my-zsh = {
       enable = true;
       # theme 留空,提示符由下面的 powerlevel10k 插件接管
+      plugins = [
+        "docker"
+        "kubectl"
+      ];
     };
 
     plugins = [
@@ -61,6 +65,8 @@
     # nvim 配置由 AstroNvim 管理(HM 不接管),vi/vim 转到 nvim
     vi = "nvim";
     vim = "nvim";
+    # kubectl 短别名
+    k = "kubectl";
   };
 
   home.sessionVariables = {
