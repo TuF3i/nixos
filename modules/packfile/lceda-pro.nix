@@ -160,7 +160,7 @@ let
       chmod +x $out/lib/lceda-pro/lceda-pro
 
       makeWrapper $out/lib/lceda-pro/lceda-pro $out/bin/.lceda-pro-real \
-        --add-flags "--no-sandbox --disable-gpu --gtk-version=3" \
+        --add-flags "--no-sandbox --gtk-version=3" \
         --set APPDIR "$out/lib/lceda-pro" \
         --set FONTCONFIG_FILE "${fontsConf}"
 
@@ -189,6 +189,12 @@ let
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       dejavu_fonts
+
+      # GPU 加速:EGL/gbm + GL 调度库 + Intel 核显驱动(WebGL 依赖)
+      mesa
+      libglvnd
+      libdrm
+      libgbm
 
       alsa-lib
       atk
