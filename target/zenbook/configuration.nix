@@ -59,6 +59,7 @@
     ../../modules/gui/redisinsight.nix
     ../../modules/gui/mongodb-compass.nix
     ../../modules/gui/yakit.nix
+    ../../modules/gui/apifox.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
