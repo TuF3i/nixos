@@ -8,6 +8,7 @@
 
     # CLI 工具(每个工具一个单文件,按需增删)
     ../../modules/cli/zsh.nix
+    ../../modules/cli/bash.nix
     ../../modules/cli/git.nix
     ../../modules/cli/neovim.nix
     ../../modules/cli/curl.nix
@@ -56,6 +57,8 @@
     ../../modules/gui/android-studio.nix
     ../../modules/gui/navicat.nix
     ../../modules/gui/redisinsight.nix
+    ../../modules/gui/mongodb-compass.nix
+    ../../modules/gui/yakit.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
@@ -76,6 +79,8 @@
     ../../modules/service/zerotier.nix
     ../../modules/service/printing.nix
     ../../modules/service/flatpak.nix
+    ../../modules/service/certificates.nix
+    ../../modules/service/yak-cap.nix
   ];
 
   time.timeZone = "Asia/Shanghai";

@@ -69,7 +69,8 @@
     # niri 以这两个变量作为合成器默认光标主题/大小
     XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
     XCURSOR_SIZE = "24";
-    # Flatpak 应用导出的 .desktop 目录(NixOS 默认不包含)
-    XDG_DATA_DIRS = "/var/lib/flatpak/exports/share:\${XDG_DATA_DIRS:-/usr/local/share:/usr/share}:\${HOME}/.local/share/flatpak/exports/share";
+    # Flatpak 应用导出的 .desktop 目录;前置追加而非覆盖,
+    # 保留 /run/current-system/sw/share(dbus 激活文件、图标等依赖它)
+    XDG_DATA_DIRS = "/var/lib/flatpak/exports/share:\${XDG_DATA_DIRS:-/run/current-system/sw/share:/usr/local/share:/usr/share}:\${HOME}/.local/share/flatpak/exports/share";
   };
 }

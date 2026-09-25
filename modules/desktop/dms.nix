@@ -47,4 +47,11 @@
   services.udisks2.enable = true;
 
   security.polkit.enable = true;
+
+  # 密钥环:Electron 应用(Compass/Bitwarden 等)经 libsecret 存凭据依赖它;
+  # 登录时由 greetd 的 PAM 用登录密码自动解锁
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.greetd.enableGnomeKeyring = true;
+  security.pam.services.dms-greeter.enableGnomeKeyring = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 }
