@@ -69,6 +69,8 @@
     ../../modules/gui/hmcl.nix
     ../../modules/gui/lceda-pro.nix
     ../../modules/gui/mqttx.nix
+    ../../modules/gui/imv.nix
+    ../../modules/gui/peazip.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
