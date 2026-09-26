@@ -10,6 +10,7 @@
     ../../modules/cli/zsh.nix
     ../../modules/cli/bash.nix
     ../../modules/cli/git.nix
+    ../../modules/cli/gcc.nix
     ../../modules/cli/neovim.nix
     ../../modules/cli/curl.nix
     ../../modules/cli/wget.nix
