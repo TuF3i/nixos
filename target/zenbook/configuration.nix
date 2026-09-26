@@ -78,6 +78,7 @@
     ../../modules/gui/peazip.nix
     ../../modules/gui/kitty.nix
     ../../modules/gui/firefox.nix
+    ../../modules/gui/impression.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
