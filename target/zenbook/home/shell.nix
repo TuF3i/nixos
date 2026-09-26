@@ -53,6 +53,8 @@
       fi
       # go install 与 userdata 自装工具的落点
       export PATH="$HOME/go/bin:$HOME/userdata/bin:$PATH"
+      # uv tool install / uvx 的工具入口目录
+      export PATH="$HOME/.local/bin:$PATH"
     '';
   };
 
