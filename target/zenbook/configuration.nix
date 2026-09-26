@@ -28,6 +28,7 @@
     ../../modules/cli/nixfmt.nix
     ../../modules/cli/gitmoji-cli.nix
     ../../modules/cli/mqttx-cli.nix
+    ../../modules/cli/dnsutils.nix
 
     # 数据库 CLI 与 Android 工具链
     ../../modules/cli/android-tools.nix
@@ -94,6 +95,7 @@
 
     # 安全工具
     ../../modules/hacker/metasploit.nix
+    ../../modules/hacker/nmap.nix
 
     # 服务
     ../../modules/service/clash-rev.nix
