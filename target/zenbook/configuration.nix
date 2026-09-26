@@ -71,6 +71,7 @@
     ../../modules/gui/mqttx.nix
     ../../modules/gui/imv.nix
     ../../modules/gui/peazip.nix
+    ../../modules/gui/kitty.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix

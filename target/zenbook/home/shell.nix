@@ -69,6 +69,8 @@
     vim = "nvim";
     # kubectl 短别名
     k = "kubectl";
+    # kitten icat 的别名
+    icat = "kitten icat";
   };
 
   home.sessionVariables = {
