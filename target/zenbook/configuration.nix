@@ -27,6 +27,7 @@
     ../../modules/cli/nil.nix
     ../../modules/cli/nixfmt.nix
     ../../modules/cli/gitmoji-cli.nix
+    ../../modules/cli/mqttx-cli.nix
 
     # 开发环境(按语言一个单文件,按需增删)
     ../../modules/dev/platformio.nix
@@ -67,6 +68,7 @@
     ../../modules/gui/termius.nix
     ../../modules/gui/hmcl.nix
     ../../modules/gui/lceda-pro.nix
+    ../../modules/gui/mqttx.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
