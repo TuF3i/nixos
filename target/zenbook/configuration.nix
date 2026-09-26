@@ -29,6 +29,7 @@
     ../../modules/cli/gitmoji-cli.nix
     ../../modules/cli/mqttx-cli.nix
     ../../modules/cli/dnsutils.nix
+    ../../modules/cli/ipmitool.nix
 
     # 数据库 CLI 与 Android 工具链
     ../../modules/cli/android-tools.nix
