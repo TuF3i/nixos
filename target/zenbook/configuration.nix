@@ -29,6 +29,10 @@
     ../../modules/cli/gitmoji-cli.nix
     ../../modules/cli/mqttx-cli.nix
 
+    # 数据库 CLI 与 Android 工具链
+    ../../modules/cli/android-tools.nix
+    ../../modules/cli/scrcpy.nix
+    ../../modules/cli/yazi.nix
     # 开发环境(按语言一个单文件,按需增删)
     ../../modules/dev/platformio.nix
     ../../modules/dev/go.nix
@@ -72,6 +76,7 @@
     ../../modules/gui/imv.nix
     ../../modules/gui/peazip.nix
     ../../modules/gui/kitty.nix
+    ../../modules/gui/firefox.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
@@ -86,6 +91,9 @@
     ../../modules/desktop/niri.nix
     ../../modules/desktop/dms.nix
     ../../modules/desktop/greeter.nix
+
+    # 安全工具
+    ../../modules/hacker/metasploit.nix
 
     # 服务
     ../../modules/service/clash-rev.nix
