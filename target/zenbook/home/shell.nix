@@ -47,6 +47,8 @@
       if [ -d "$HOME/.platformio/penv/bin" ]; then
         export PATH="$HOME/.platformio/penv/bin:$PATH"
       fi
+      # go install 与 userdata 自装工具的落点
+      export PATH="$HOME/go/bin:$HOME/userdata/bin:$PATH"
     '';
   };
 
