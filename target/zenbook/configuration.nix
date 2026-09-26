@@ -80,6 +80,8 @@
     ../../modules/gui/kitty.nix
     ../../modules/gui/firefox.nix
     ../../modules/gui/impression.nix
+    ../../modules/gui/remmina.nix
+    ../../modules/gui/tigervnc.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
