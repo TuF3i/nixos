@@ -25,5 +25,6 @@
     ./tools.nix
     ./apps.nix
     ./gpg-ssh.nix
+    ./fastfetch.nix
   ];
 }

@@ -31,7 +31,11 @@
 
     # p10k 配置由 `p10k configure` 生成在 ~/.p10k.zsh(非 HM 管理),必须显式
     # source,否则 p10k 找不到已保存的配置,每个新终端都会启动配置向导
+    # fastfetch 在 p10k 加载前展示(交互式非 SSH 会话才跑,避免污染脚本环境)
     initContent = ''
+      if [[ -o interactive && $- != *r* && -z "$SSH_CONNECTION" && -z "$INSIDE_EMACS" ]]; then
+        fastfetch
+      fi
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
 
@@ -71,6 +75,8 @@
     k = "kubectl";
     # kitten icat 的别名
     icat = "kitten icat";
+    # zed 的别名
+    zed = "zeditor";
   };
 
   home.sessionVariables = {
