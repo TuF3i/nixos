@@ -197,7 +197,6 @@ let
 
       # GPU 加速链路:mesa 驱动 + GL 调度(同 lceda-pro,WebGL 必需)
       mesa
-      mesa.drivers
       intel-media-driver
       vulkan-loader
       libglvnd

@@ -83,7 +83,6 @@
     ../../modules/gui/remmina.nix
     ../../modules/gui/tigervnc.nix
     ../../modules/gui/wireshark.nix
-    ../../modules/gui/rpi-imager.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
@@ -130,6 +129,7 @@
       "bluetooth"
       "docker"
       "wireshark"
+      "disk" # rpi-imager 等写块设备(/dev/sdX)免 sudo
     ];
 
     shell = pkgs.zsh;
