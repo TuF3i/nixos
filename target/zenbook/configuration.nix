@@ -82,6 +82,8 @@
     ../../modules/gui/impression.nix
     ../../modules/gui/remmina.nix
     ../../modules/gui/tigervnc.nix
+    ../../modules/gui/wireshark.nix
+    ../../modules/gui/rpi-imager.nix
 
     # 通讯与办公
     ../../modules/gui/qq.nix
@@ -127,6 +129,7 @@
       "dialout"
       "bluetooth"
       "docker"
+      "wireshark"
     ];
 
     shell = pkgs.zsh;
