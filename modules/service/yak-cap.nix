@@ -9,7 +9,7 @@
       Type = "oneshot";
       ExecStart = let
         script = pkgs.writeShellScript "yak-cap" ''
-          for bin in $(find /home/tuf3i/.yakit -maxdepth 4 -type f -name "yak*" -executable 2>/dev/null); do
+          for bin in $(find /home/tuf3i/yakit-projects/yak-engine -maxdepth 2 -type f -name "yak*" -executable 2>/dev/null); do
             ${pkgs.libcap}/bin/setcap cap_net_raw,cap_net_admin+ep "$bin" 2>/dev/null || true
           done
         '';
@@ -23,7 +23,7 @@
     description = "Watch yak engine downloads for cap granting";
     wantedBy = [ "multi-user.target" ];
     pathConfig = {
-      PathModified = "/home/tuf3i/.yakit";
+      PathModified = "/home/tuf3i/yakit-projects/yak-engine";
       Unit = "yak-cap.service";
     };
   };
