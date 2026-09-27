@@ -171,7 +171,7 @@ let
       rm -f $out/lib/apifox/AppRun $out/lib/apifox/*.desktop
 
       makeWrapper $out/lib/apifox/apifox $out/bin/apifox \
-        --add-flags "--no-sandbox --disable-gpu --use-fake-device-for-media-stream" \
+        --add-flags "--no-sandbox --use-fake-device-for-media-stream" \
         --set APPDIR "$out/lib/apifox"
 
       install -Dm644 $src/apifox.png \
@@ -194,6 +194,15 @@ let
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       dejavu_fonts
+
+      # GPU 加速链路:mesa 驱动 + GL 调度(同 lceda-pro,WebGL 必需)
+      mesa
+      mesa.drivers
+      intel-media-driver
+      vulkan-loader
+      libglvnd
+      libdrm
+      libgbm
 
       alsa-lib
       atk
